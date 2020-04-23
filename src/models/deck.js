@@ -26,11 +26,10 @@ export default class Deck {
     }
 
     /**
-     * Function that works on inserting a 
-     * new card in the deck
+     * Function to insert a new card in the deck
      */
     insertAt(card, position) {
-        
+        this.cards.splice(position, 0, card);
     }
 
     /**
