@@ -1,7 +1,7 @@
 import Hand from "./hand";
 
 export default class Board extends Hand {
-    constructor() {
-        super();
+    constructor(parent) {
+        super(parent);
     }
 }
