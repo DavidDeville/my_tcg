@@ -1,9 +1,13 @@
-
 export default class Deck {
     constructor (config) {
         this.cards = config.cards;
     }
 
+    /**
+     * Function that will handle the deck shuffle
+     * 
+     * @return false - in case the deck is empty, true otherwise
+     */
     shuffle () {
         let shuffledArray = [];
         let i = this.cards.length, j, temp;
@@ -21,9 +25,20 @@ export default class Deck {
         return true;
     }
 
+    /**
+     * Function handling all the drawing logic
+     * 
+     * @return int - the drawed card
+     */
     draw () {
     }
 
+    /**
+     * Function that handles the current number of cards in the deck
+     * 
+     * @return int - the number of cards
+     */
     getCardsCount () {
+        return this.cards.length;
     }
 }
