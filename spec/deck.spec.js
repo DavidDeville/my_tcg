@@ -31,7 +31,6 @@ describe("deck", function () {
       const config = { cards: [555,777,888]};
       const deck = new Deck(config);
       deck.insertAt("trololo", deck.cards.length+1);
-      console.log(deck.cards);
       expect(deck.cards.length).toBe(4);
     });
   });
