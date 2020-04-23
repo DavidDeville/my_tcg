@@ -24,6 +24,18 @@ describe("deck", function () {
   });
 
   /**
+   * Tests of insertAt method
+   */
+  describe("insertAt", function() {
+    it("should insert a new card", function() {
+      const config = { cards: [555,777,888]};
+      const deck = new Deck(config);
+      deck.cards.splice(deck.cards.length+1, 0, 999);
+      expect(deck.cards.length).toBe(4);
+    });
+  });
+
+  /**
    * Tests of draw method
    */
   describe("draw", function() {

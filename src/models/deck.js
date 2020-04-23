@@ -26,6 +26,14 @@ export default class Deck {
     }
 
     /**
+     * Function that works on inserting a 
+     * new card in the deck
+     */
+    insertAt(card, position) {
+        
+    }
+
+    /**
      * Function handling all the drawing logic
      * 
      * @return int|string - the drawed card
