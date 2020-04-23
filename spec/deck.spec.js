@@ -24,6 +24,28 @@ describe("deck", function () {
   });
 
   /**
+   * Tests of draw method
+   */
+  describe("draw", function() {
+    it("shouldn't be possible to draw an empty deck", function() {
+      const config = { cards: [] };
+      const deck = new Deck(config);
+      expect(deck.draw()).toBe(false);
+    });
+    it("should remove the card", function() {
+      const config = { cards: [777,888,999] };
+      const deck = new Deck(config);
+      deck.draw();
+      expect(deck.cards.length).toBe(2);
+    });
+    it("should return drawn card", function() {
+      const config = { cards: [777,888,999] };
+      const deck = new Deck(config);
+      expect(deck.draw()).toBe(777);
+    });
+  });
+
+  /**
    * Tests of getCardsCount method
    */
   describe("cards count", function () {

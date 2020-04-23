@@ -28,9 +28,17 @@ export default class Deck {
     /**
      * Function handling all the drawing logic
      * 
-     * @return int - the drawed card
+     * @return int|string - the drawed card
      */
     draw () {
+        let drawnCard;
+        let numberOfCards = this.getCardsCount();
+        if(numberOfCards < 1) {
+            return false;
+        }
+        drawnCard = this.cards[0];
+        this.cards.shift();
+        return drawnCard;
     }
 
     /**
